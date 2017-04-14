@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.25",
+	"kevinlebrun/colors.php": "0.*"	
+    }
+}
