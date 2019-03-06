@@ -1,6 +1,8 @@
 # create_image.sh
 
 Prerequisite
+- Install python python-dev python-pip 'apt-get install python python-dev python-pip'
+- Run 'pip install awscli'
 - Configure your AWS access 'aws configure --profile <aws_profile_name>'
 - Clone this repo to anywhere to your liking
 - Run the command
