@@ -49,7 +49,7 @@ prerequisite_check() {
 }
 
 create_image() {
-	image_name="$instance_name.$(date +%Y%m%d-%H%M%S --date "8 hours")"
+	image_name="$instance_name.$(date +%Y%m%d-%H%M%S)"
 	ami_id=$(aws --profile ${AWSCLI_PROFILE} ec2 create-image --no-reboot --instance-id $instance_id --name $image_name --description "Image created for instance $instance_name with instance ID $instance_id")
 	log "New AMI ID $instance_name is $ami_id"
 	aws --profile ${AWSCLI_PROFILE} ec2 create-tags --region $region --resource $ami_id --tags Key=CreatedBy,Value=AutomatedImager Key=InstanceName,Value=$instance_name
